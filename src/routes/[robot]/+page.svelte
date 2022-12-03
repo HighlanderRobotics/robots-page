@@ -116,7 +116,7 @@
 			const endingScene = new ScrollMagic.Scene({ triggerElement: '.end', triggerHook: 1 })
 				.setClassToggle('#selkie-animation', 'ended')
 				.addTo(controller);
-		}, 50);
+		}, 100);
 	}
 </script>
 
