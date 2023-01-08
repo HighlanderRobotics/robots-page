@@ -5,6 +5,7 @@
 
 	// @ts-ignore
 	import * as ScrollMagic from 'scrollmagic-with-ssr';
+	import { fade } from 'svelte/transition';
 
 	export let data: PageData;
 	let { robotData } = data;
@@ -42,6 +43,9 @@
                 );
                 console.log(images.length, robotData.animationFrameCount);
 
+				// Uncomment to simulate slow connection:
+				// await new Promise((r) => setTimeout(r, 20))
+
                 if (images.length === robotData.animationFrameCount) onFinishedLoading();
 			}
 		})();
@@ -50,6 +54,7 @@
 	function onFinishedLoading() {
 		console.log('Finished loading');
 
+		updateImage(0);
 		const context: CanvasRenderingContext2D = canvas.getContext('2d')!;
 
 		onScroll = () => {
@@ -83,7 +88,7 @@
 			updateImage(1);
 			finishedLoading = true;
 
-			setTimeout(() => (triggerLoadedAnimation = true), 5);
+			setTimeout(() => (triggerLoadedAnimation = true), 300);
 
 			// ScrollMagic
 			const controller = new ScrollMagic.Controller();
@@ -126,7 +131,7 @@
 
 
 {#if !finishedLoading && loadingTakingLong}
-    <div class="loader">
+    <div class="loader" transition:fade={{ duration: 300 }}>
         <div class="center">
             <img src={loadingGear} alt="loading symbol" style:transform={`rotate(${(images.length/robotData.animationFrameCount)*360}deg)`}>
             <div class="percentage">{Math.round((images.length/robotData.animationFrameCount)*100)}%</div>
