@@ -29,6 +29,8 @@
 	onMount(() => {
 		// Load images
 		(async () => {
+			setTimeout(() => loadingTakingLong = true, 1000)
+
 			for (let i = 1; i < robotData.animationFrameCount; i++) {
                 const img = new Image();
                 img.src = getFramePath(i);
@@ -42,8 +44,6 @@
 
                 if (images.length === robotData.animationFrameCount) onFinishedLoading();
 			}
-
-            setTimeout(() => loadingTakingLong = true, 1000)
 		})();
 	});
 
