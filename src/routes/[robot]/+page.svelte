@@ -35,18 +35,16 @@
 			for (let i = 1; i < robotData.animationFrameCount; i++) {
                 const img = new Image();
                 img.src = getFramePath(i);
+				img.onload = (e) => {
+					console.log(
+						Math.round((images.length / robotData.animationFrameCount) * 100) + '% loaded'
+					);
+					console.log(images.length, robotData.animationFrameCount);
+					
+					images[i] = img;
 
-                images[i] = img;
-
-                console.log(
-                    Math.round((images.length / robotData.animationFrameCount) * 100) + '% loaded'
-                );
-                console.log(images.length, robotData.animationFrameCount);
-
-				// Uncomment to simulate slow connection:
-				// await new Promise((r) => setTimeout(r, 20))
-
-                if (images.length === robotData.animationFrameCount) onFinishedLoading();
+					if (images.length === robotData.animationFrameCount) onFinishedLoading();
+				}
 			}
 		})();
 	});
