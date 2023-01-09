@@ -93,31 +93,6 @@
 			// ScrollMagic
 			const controller = new ScrollMagic.Controller();
 
-			const subassembliesScene = new ScrollMagic.Scene({
-				triggerElement: '.description',
-				duration: 400
-			})
-				.setClassToggle('.description', 'visible')
-				.addTo(controller);
-
-			for (const subbasembly in robotData.subassemblies) {
-				new ScrollMagic.Scene({
-					triggerElement: `#subassembly-${subbasembly}`,
-					triggerHook: 0.2,
-					duration: 400
-				})
-					.setClassToggle(`#subassembly-${subbasembly} > .description`, 'visible')
-					.addTo(controller);
-
-				new ScrollMagic.Scene({
-					triggerElement: `#subassembly-${subbasembly}`,
-					triggerHook: 0,
-					duration: 300
-				})
-					.setPin(`#subassembly-${subbasembly}`)
-					.addTo(controller);
-			}
-
 			const endingScene = new ScrollMagic.Scene({ triggerElement: '.end', triggerHook: 1 })
 				.setClassToggle('#selkie-animation', 'ended')
 				.addTo(controller);
@@ -282,7 +257,6 @@
 	}
 
 	.description {
-		opacity: 0;
 		transition: opacity 0.3s;
 	}
 
@@ -308,10 +282,6 @@
 		top: 50%;
 		transform: translateY(-50%);
 		right: 2rem;
-	}
-
-	.description.visible {
-		opacity: 1;
 	}
 
 	.description h2 {
