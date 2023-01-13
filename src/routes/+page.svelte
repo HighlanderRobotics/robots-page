@@ -2,13 +2,15 @@
 
 	import { robotsData } from "$lib/robotsData";
 
+    let scrollY = 0;
+
 </script>
 
 <svelte:head>
     <title>Robots — Highlander Robotics</title>
 </svelte:head>
 
-<nav>
+<nav class:scrolled-under={scrollY > 0}>
     <a href="https://highlanderrobotics.com/">
         <div class="back-arrow-glyph material-icons">arrow_back</div>
         <div class="text">Main Site</div>
@@ -19,7 +21,7 @@
 <main>
     <div class="robot-list">
         {#each Object.entries(robotsData) as [key, robot]}
-            <a href={robot.unfinished ? undefined : `/${key}`} disabled={robot.unfinished}>
+            <a href={robot.unfinished ? undefined : `/${key}`}>
                 <div class={"robot-card " + ((robot.unfinished || false) ? "unfinished" : "") }>
                     <img src={`/assets/robots/${key}/animation/0001.png`} alt={`${robot.name} render`}>
                     <div class="text">
@@ -35,13 +37,15 @@
     </div>
 </main>
 
+<svelte:window bind:scrollY={scrollY} />
+
 <style>
     :root {
         font-size: 20px;
     }
 
     nav {
-        background-color: rgba(237, 237, 237, 0.588);
+        background-color: #fff;
         position: fixed;
         display: flex;
         align-items: center;
@@ -49,8 +53,12 @@
         left: 0;
         right: 0;
         z-index: 999;
-        backdrop-filter: blur(1rem);
-        border-bottom: 2px solid #ddd;
+
+        transition: background-color 0.3s;
+    }
+
+    nav.scrolled-under {
+        background-color: #dbdbdb;
     }
 
     nav a {
@@ -59,7 +67,7 @@
         display: flex;
         align-items: center;
         padding: 0.5em;
-        color: #470a68;
+        color: #350868;
         transition: color 0.3s;
     }
 
@@ -87,8 +95,9 @@
         position: fixed;
         left: 50%;
         transform: translateX(-50%);
-        font-family: effra, sans-serif;
-        color: #470a68;
+        font-family: 'Heebo', sans-serif;
+        font-weight: 800;
+        color: #350868;
         font-size: 1.3rem;
     }
 
@@ -116,7 +125,7 @@
 
     .robot-card {
         background-color: #fff;
-        border: 2px solid rgb(219, 219, 219);
+        border: 2px solid #dbdbdb;
         border-radius: 1rem;
         cursor: pointer;
 
@@ -133,17 +142,19 @@
 
     .robot-card img {
         width: 20rem;
+        border-bottom: 2px solid #dbdbdb;
     }
 
     .robot-card .text {
-        background-color: #f1f1f1;
+        background-color: #fff;
         padding: 1rem;
     }
 
     .name {
-        font-family: 'effra', sans-serif;
+        font-family: 'Heebo', sans-serif;
         font-size: 1.5rem;
-        color: #470a68;
+        color: #350868;
+        font-weight: 700;
     }
 
     .season {
@@ -168,7 +179,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background-color: #470a68;
+        background-color: #350868;
         color: #fff;
         font-family: 'Open Sans', sans-serif;
         border-radius: 10em;

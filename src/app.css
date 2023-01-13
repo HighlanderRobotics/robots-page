@@ -72,8 +72,3 @@ select {
     scroll-behavior: auto !important;
   }
 }
-
-@font-face {
-  font-family: effra;
-  src: url("$lib/assets/fonts/effra.woff");
-}

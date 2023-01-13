@@ -166,7 +166,7 @@
 		margin: 0;
 		padding: 0;
 		box-sizing: border-box;
-		font-family: 'Open Sans';
+		font-family: 'Heebo';
 	}
 
     .loader {
@@ -191,12 +191,12 @@
         transform: translate(-50%, -50%);
         font-size: 1.3rem;
         font-weight: bold;
-        color: #470a68;
+        color: #350868;
     }
 
 	h1,
 	h2 {
-		font-family: effra;
+		font-family: 'Heebo';
 	}
 
 	#selkie-animation {
@@ -231,13 +231,14 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		color: #470a68;
+		color: #350868;
 		background-color: #fff;
 		overflow: visible;
 	}
 
 	.hero .titles h1 {
 		line-height: 0.9em;
+		font-family: 'Russo One';
 		text-transform: uppercase;
 		opacity: 0;
 		transform: scale(0.95);
@@ -287,7 +288,7 @@
 	}
 
 	.description p .highlight {
-		color: #470a68;
+		color: #350868;
 		font-weight: 700;
 	}
 
@@ -296,7 +297,7 @@
 	}
 
 	.hero h1 {
-		font-family: effra, sans-serif;
+		font-family: 'Heebo', sans-serif;
 	}
 
 	.robot-journey {
@@ -316,7 +317,7 @@
 	}
 
 	.metric {
-		background-color: #470a68;
+		background-color: #350868;
 
 		display: flex;
 		flex-direction: column;
@@ -330,7 +331,8 @@
 
 	.end .metric .number {
 		font-size: 4rem;
-		font-family: effra;
+		font-family: 'Heebo';
+		font-weight: 800;
 	}
 
 	.end .reveal-link {

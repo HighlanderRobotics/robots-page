@@ -9,15 +9,12 @@
 
 <style>
     nav {
-        background-color: rgba(237, 237, 237, 0.588);
+        background-color: #fff;
         position: fixed;
         top: 0;
         left: 0;
         z-index: 999;
-        backdrop-filter: blur(1rem);
         border-bottom-right-radius: 0.5rem;
-        border-bottom: 2px solid #ddd;
-        border-right: 2px solid #ddd;
     }
 
     a {
@@ -26,7 +23,7 @@
         display: flex;
         align-items: center;
         padding: 0.5em;
-        color: #470a68;
+        color: #350868;
         transition: color 0.3s;
     }
 
