@@ -131,7 +131,9 @@
 					style={`--poke-into-animation-amount: ${subassembly.pokeIntoAnimationPercent || 0}vh`}
 				>
 					<h2>{subassembly.heading}</h2>
-					<p>{subassembly.body}</p>
+					<p>
+						{@html subassembly.body.replace(/\*([^\*]*)\*/g, '<span class="highlight">$1</span>')}
+					</p>
 				</div>
 			</section>
 		{/each}
@@ -157,7 +159,7 @@
 
 <svelte:window on:scroll={onScroll} bind:scrollY={scrollHeight} />
 
-<style>
+<style global>
 	:root {
 		font-size: 20px;
 	}

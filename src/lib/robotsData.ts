@@ -26,18 +26,18 @@ export const robotsData: {[name: string]: RobotData } = {
         subassemblies: [
             {
                 heading: "Drivetrain",
-                body: "Our drivebase is a simplistic 24” square swerve drive made from 2” by 1” aluminum beams. This differs slightly from our design last year as we choose a smaller base for more maneuverability and less supporting beams to cut down on weight. The corners are held together by 1/8th inch aluminum gussets that are riveted into the base but also screw into the mk3 swerve modules with .3 inch bolts. Finally, we have a light bottom plate in which all our electronics are secured into.",
+                body: "Our drivebase is a simplistic 24” square swerve drive made from 2” by 1” aluminum beams. This differs slightly from our design last year as we choose a smaller base for *more maneuverability* and less supporting beams to *cut down on weight*. The corners are held together by 1/8th inch aluminum gussets that are riveted into the base but also screw into the mk3 swerve modules with .3 inch bolts. Finally, we have a light bottom plate in which all our electronics are secured into.",
                 position: "center",
             },
             {
                 heading: "Shooter",
-                body: "As the central mechanism of the robot, our shooter integrates both shooting and routing into one subassembly. Two independently controlled routing wheels take the balls from the intake and store them in our linear routing system. Using beam breaks and color sensors, we are able to control two balls and have automatic ball rejection. Once software auto-aim is locked on, we use a two wheel active shooter with an adjustable hood that allows the ball to have a consistent shot from anywhere while reducing spin.",
+                body: "As the central mechanism of the robot, our shooter integrates both shooting and routing into one subassembly. Two independently controlled routing wheels take the balls from the intake and store them in our linear routing system. Using beam breaks and color sensors, we are able to control *two balls* and have *automatic ball rejection*. Once software auto-aim is locked on, we use a two wheel active shooter with an adjustable hood that allows the ball to have a *consistent shot from anywhere* while reducing spin.",
                 position: "left",
                 pokeIntoAnimationPercent: 30,
             },
             {
                 heading: "Intake",
-                body: "Our pneumatically deployed over-bumper intake features 2-inch compliant wheels and vector-mecanum indexing in order to pick up cargo as fast as possible. Polycarbonate material, used on arms and main plates, is resistant to impacts and flexes instead of cracking. The intake deploys on a non-parallel 4 bar via just 2 inches of piston stroke, making the deployment extremely jam-resistant and fast. Our intake is also balanced with surgical tubing to increase deploy speed and smoothness.",
+                body: "Our pneumatically deployed over-bumper intake features 2-inch compliant wheels and vector-mecanum indexing in order to pick up cargo *as fast as possible*. Polycarbonate material, used on arms and main plates, is *resistant to impacts* and flexes instead of cracking. The intake deploys on a non-parallel 4 bar via just 2 inches of piston stroke, making the deployment *extremely jam-resistant and fast*. Our intake is also balanced with surgical tubing to increase deploy speed and smoothness.",
                 position: "right",
                 pokeIntoAnimationPercent: 30,
             },
