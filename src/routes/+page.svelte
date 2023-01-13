@@ -2,15 +2,13 @@
 
 	import { robotsData } from "$lib/robotsData";
 
-    let scrollY = 0;
-
 </script>
 
 <svelte:head>
     <title>Robots — Highlander Robotics</title>
 </svelte:head>
 
-<nav class:scrolled-under={scrollY > 0}>
+<nav>
     <a href="https://highlanderrobotics.com/">
         <div class="back-arrow-glyph material-icons">arrow_back</div>
         <div class="text">Main Site</div>
@@ -37,8 +35,6 @@
     </div>
 </main>
 
-<svelte:window bind:scrollY={scrollY} />
-
 <style>
     :root {
         font-size: 20px;
@@ -54,11 +50,7 @@
         right: 0;
         z-index: 999;
 
-        transition: background-color 0.3s;
-    }
-
-    nav.scrolled-under {
-        background-color: #dbdbdb;
+        border-bottom: 2px solid #dbdbdb;
     }
 
     nav a {
