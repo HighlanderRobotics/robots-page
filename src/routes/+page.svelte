@@ -1,6 +1,7 @@
 <script>
 
 	import { robotsData } from "$lib/robotsData";
+    import logo from "$lib/assets/images/logo-wide.png";
 
 </script>
 
@@ -13,7 +14,10 @@
         <div class="back-arrow-glyph material-icons">arrow_back</div>
         <div class="text">Main Site</div>
     </a>
-    <div class="page-title">8033 Robots</div>
+    <div class="page-title">
+        <img src={logo} alt="8033 robots" />
+        <div>Robots</div>
+    </div>
 </nav>
 
 <main>
@@ -91,6 +95,14 @@
         font-weight: 800;
         color: #350868;
         font-size: 1.3rem;
+
+        display: flex;
+        align-items: center;
+    }
+
+    .page-title img {
+        height: 1.2em;
+        margin: 0.5ch;
     }
 
     main {
