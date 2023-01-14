@@ -49,6 +49,16 @@ export const robotsData: {[name: string]: RobotData } = {
             },
         ],
     },
+    whirlpool: {
+        nameScalePercent: 18,
+        name: "Whirlpool",
+        seasonName: "Infinite Recharge At Home",
+        animationFrameCount: 0,
+        revealVideoURL: "",
+        unfinished: true,
+        metrics: [],
+        subassemblies: [],
+    },
     nessie: {
         nameScalePercent: 30,
         name: "Nessie",
@@ -59,14 +69,4 @@ export const robotsData: {[name: string]: RobotData } = {
         metrics: [],
         subassemblies: [],
     },
-    whirlpool: {
-        nameScalePercent: 18,
-        name: "Whirlpool",
-        seasonName: "Infinite Recharge At Home",
-        animationFrameCount: 0,
-        revealVideoURL: "",
-        unfinished: true,
-        metrics: [],
-        subassemblies: [],
-    }
 }
