@@ -1,7 +1,7 @@
 <script>
 
 	import { robotsData } from "$lib/robotsData";
-    import logo from "$lib/assets/images/logo-wide.png";
+    import logo from "$lib/assets/images/logo-icon.png";
 
 </script>
 
@@ -15,8 +15,11 @@
         <div class="text">Main Site</div>
     </a>
     <div class="page-title">
-        <img src={logo} alt="8033 robots" />
-        <div class="text">Robots</div>
+        <img src={logo} alt="8033 logo" />
+        <div class="number">8033</div>
+        <div class="text">
+            Robots
+        </div>
     </div>
 </nav>
 
@@ -96,11 +99,19 @@
         align-items: center;
     }
 
+    .page-title .number {
+        font-family: 'Russo One', sans-serif;
+    }
+
+    .page-title .text, .page-title .number {
+        color: #350868;
+        font-size: 1.5rem;
+    }
+
     .page-title .text {
         font-family: 'Heebo', sans-serif;
         font-weight: 800;
-        color: #350868;
-        font-size: 1.5rem;
+        margin-left: 0.5ch;
     }
 
     .page-title img {
