@@ -16,7 +16,7 @@
     </a>
     <div class="page-title">
         <img src={logo} alt="8033 robots" />
-        <div>Robots</div>
+        <div class="text">Robots</div>
     </div>
 </nav>
 
@@ -71,7 +71,7 @@
         color: #000;
     }
 
-    nav .text {
+    nav a .text {
         margin-left: 0.5ch;
         font-family: 'DM Sans', sans-serif;
         text-transform: uppercase;
@@ -91,17 +91,20 @@
         position: fixed;
         left: 50%;
         transform: translateX(-50%);
-        font-family: 'Heebo', sans-serif;
-        font-weight: 800;
-        color: #350868;
-        font-size: 1.3rem;
 
         display: flex;
         align-items: center;
     }
 
+    .page-title .text {
+        font-family: 'Heebo', sans-serif;
+        font-weight: 800;
+        color: #350868;
+        font-size: 1.5rem;
+    }
+
     .page-title img {
-        height: 1.2em;
+        height: 1.7rem;
         margin: 0.5ch;
     }
 
